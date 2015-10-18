@@ -26,6 +26,7 @@ public class BeatBoxFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRetainInstance(true);  //The fragment is not destroyed with the activity, that may be possible that the sound doesn't will cut when turn the smartphone
 
         mBeatBox = new BeatBox(getActivity());
     }
